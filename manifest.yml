@@ -1,6 +1,6 @@
 applications:
 - name: go-env
   health-check-type: process    
-  description : Simple & small cloud-foundry app
+  description : Small cloud-foundry app
   memory: 16M
   disk_quota: 16M
