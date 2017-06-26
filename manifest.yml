@@ -4,3 +4,4 @@ applications:
   description : Simple & small cloud-foundry app
   memory: 16M
   disk_quota: 16M
+  no-route: true
