@@ -3,8 +3,7 @@ package main
 import (
 	"fmt"
 	"time"
-
-	"github.com/elgs/gostrgen"
+	"github.com/tjarratt/babble"
 )
 
 func main() {
@@ -16,17 +15,11 @@ func main() {
 }
 
 func getCharacters() (string, error) {
-	charsToGenerate := 20
-	charSet := gostrgen.Lower | gostrgen.Digit
-	includes := "[]{}<>" // optionally include some additional letters
-	excludes := "Ol"     //exclude big 'O' and small 'l' to avoid confusion with zero and one.
 
-	str, err := gostrgen.RandGen(charsToGenerate, charSet, includes, excludes)
-	if err != nil {
-		fmt.Println(err)
-		return "", err
-
-	}
+	babbler := babble.NewBabbler()
+	babbler.Separator = " "
+	babbler.Count = 3
+	str := babbler.Babble()
 	time.Sleep(1 * time.Second)
 	return str, nil
 
