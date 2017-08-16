@@ -5,3 +5,5 @@ applications:
   memory: 16M
   disk_quota: 16M
   no-route: true
+  stack: cflinuxfs2
+
